@@ -150,6 +150,31 @@ body {
   color: rgb(204, 204, 204) !important;
 }
 
+.contact {
+  color: white;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group {
+  margin: auto;
+}
+
+.subBtn {
+  text-align: right;
+}
+
+.btn {
+  margin: 10px;
+  width: 200px;
+  background-color: rgb(24, 24, 24) !important;
+  color: #68b992 !important;
+  border-color: #2a4f3d !important;
+  border-width: 2px !important;
+}
+
 /* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
