@@ -4,9 +4,6 @@ import { init } from '@emailjs/browser'
 import { send } from 'emailjs-com'
 init("user_fWsJfb5HpUJl4vKgJHZi3");
 
-
-
-// service_4av0u3s
 export default function Contact() {
 
     const [contactInfo, setContactInfo] = useState({

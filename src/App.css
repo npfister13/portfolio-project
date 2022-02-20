@@ -34,6 +34,10 @@ body {
   color: rgb(200, 200, 200)
 }
 
+h1 {
+  color: white;
+}
+
 #about h1 {
   font-size: 56px;
   font-weight: 600;
@@ -173,6 +177,25 @@ body {
   color: #68b992 !important;
   border-color: #2a4f3d !important;
   border-width: 2px !important;
+} .btn:hover {
+  background-color: #68b992 !important;
+  color: rgb(24, 24, 24) !important;
+} .btn:active {
+  background-color: #535e58 !important;
+  color: white !important;
+} .btn:focus {
+  box-shadow: 0 0 0 0.1rem rgb(225 225 225 / 25%) !important;
+}
+
+.card {
+  background-color: #282c34 !important;
+  color: white;
+  width: 26rem !important;
+  height: 450px;
+  margin: auto;
+  align-self: center;
+  margin-bottom: 10px;
+  padding-top: 15px !important;
 }
 
 /* 
