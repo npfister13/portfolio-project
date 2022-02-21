@@ -2,24 +2,57 @@ import React, { useState, Component } from "react";
 import NavTab from "./NavTab";
 import { Card } from "react-bootstrap";
 import { PROJECTS } from "../shared/projects";
+import { ARTWORKS } from "../shared/artworks";
+import { makeStyles } from '@material-ui/core';
 
-function RenderProject({projects, projectsDisplayArray, projectsPerScreen}) {
-    const tempArray = projectsDisplayArray;
+const useStyles = makeStyles(theme => ({
+    container: {
+        display: "flex",
+        alignItems: "center",
+    },
+    border: {
+        borderBottom: "2px solid lightgray",
+        width: "100%"
+    },
+    content: {
+        paddingTop: theme.spacing(0.5),
+        paddingBottom: theme.spacing(0.5),
+        paddingRight: theme.spacing(2),
+        paddingLeft: theme.spacing(2),
+        fontWeight: 500,
+        fontSize: 22,
+        color: "lightgray"
+    }
+}));
+
+const DividerWithText = ({children}) => {
+    const classes = useStyles();
+    return (
+        <div className={classes.container}>
+            <div className={classes.border} />
+            <span className={classes.content}>{children}</span>
+            <div className={classes.border}/>
+        </div>
+    )
+}
+
+function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
+    const tempArray = itemsDisplayArray;
     return( 
         <div className="row">
             {                 
-                projects.map((project, index) => {
-                    tempArray.indexOf(project) > -1 ? console.log('in array already') : tempArray.push(project) 
-                    if (index < projectsPerScreen){
+                items.map((item, index) => {
+                    tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
+                    if (index < itemsPerScreen){
                         console.log('in the if')
-                        console.log('pps ' + projectsPerScreen)
+                        console.log('pps ' + itemsPerScreen)
                         return (
-                            <Card key={project.id}>
-                                <Card.Img variant="top" src={project.image} />
+                            <Card key={item.id}>
+                                <Card.Img variant="top" src={item.image} />
                                 <Card.Body>
-                                    <Card.Title>{project.name}</Card.Title>
+                                    <Card.Title>{item.name}</Card.Title>
                                     <Card.Text>
-                                        {project.description}
+                                        {item.description}
                                     </Card.Text>
                                     
                                 </Card.Body>
@@ -59,9 +92,11 @@ export default class Projects extends Component {
         super(props);
         this.state = {
             projectsPerScreen: 3,
-            currentPage: 0,
+            artworksPerScreen: 3,
             projects: PROJECTS,
-            projectsDisplayArray: []
+            artworks: ARTWORKS,
+            projectsDisplayArray: [],
+            artworksDisplayArray: [],
         }
     }
 
@@ -100,9 +135,14 @@ export default class Projects extends Component {
                 <div className="projects">
                     <div className="container">
                         <h1>Projects: </h1>
-                        <RenderProject projects={this.state.projects} projectsPerScreen={this.state.projectsPerScreen} projectsDisplayArray={this.state.projectsDisplayArray} />
+                        <RenderItem items={this.state.projects} itemsPerScreen={this.state.projectsPerScreen} itemsDisplayArray={this.state.projectsDisplayArray} />
                         {moreBtn}
                         {lessBtn}
+                    </div>
+                    <DividerWithText>Artwork</DividerWithText>
+                    <div className="container">
+                        <h1>Artwork:</h1>
+                        <RenderItem items={this.state.artworks} itemsPerScreen={this.state.artworksPerScreen} itemsDisplayArray={this.state.artworksDisplayArray} />
                     </div>
                 </div>
             </React.Fragment>
