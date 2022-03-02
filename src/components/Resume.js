@@ -99,7 +99,7 @@ function RenderSmallSkill({skills}) {
 
 export default function Resume() {
 
-    const [skills, setSkills] = useState(SKILLS)
+    const [skills] = useState(SKILLS)
 
     return ( 
         <React.Fragment>

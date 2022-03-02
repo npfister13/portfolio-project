@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button } from 'reactstrap';
+import { Nav, Navbar, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab'
 
 export default function NavTab() {
 

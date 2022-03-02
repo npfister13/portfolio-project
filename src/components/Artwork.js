@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import NavTab from "./NavTab";
 import { Card } from "react-bootstrap";
 import { ARTWORKS } from "../shared/artworks";

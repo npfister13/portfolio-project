@@ -5,7 +5,7 @@ import Projects from './Projects';
 import Resume from './Resume';
 import Home from './Home';
 import Artwork from './Artwork'
-import { NavLink, Routes, Route, Redirect } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 export default function Main() {
 
