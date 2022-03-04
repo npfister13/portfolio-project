@@ -40,7 +40,7 @@ function RenderBigSkill({skills}) {
     return (
         <div className="row">
             {
-                skills.map((skill, index) => {
+                skills.map((skill) => {
                     if (skill.big){
                         return(
                             <div className="bigSkillWrapper">

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: rgb(24, 24, 24);
+  color: white;
   /* background-color: #888a8f; */
 }
 
@@ -31,10 +32,37 @@ body {
   background-color: #282c34;
 }
 
+.homeWrapper img::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.homeWrapper img:hover {
+  -webkit-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+  box-shadow: 0 0 8px 8px #2a4f3d;
+}
+
+.homeWrapper img:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+}
+ 
 .infoPanelText {
   font-size: 30px;
   font-weight: 200;
-  color: white;
 }
 
 .infoPanelText a {
@@ -45,8 +73,10 @@ body {
   color: rgb(200, 200, 200)
 }
 
-h1 {
-  color: white;
+#whatIDo .header {
+  text-align: end;
+  justify-content: center;
+  margin: auto;
 }
 
 #about h1 {
@@ -64,43 +94,14 @@ h1 {
   border-radius: 5px;
   box-shadow: 0 0 4px 4px #2a4f3d;
   padding: 0;
-}
-
-#homeImg {
   border: 6px solid rgb(0, 0, 0);
   border-radius: 5px;
   box-shadow: 0 0 4px 4px #2a4f3d;
   padding: 0;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}  
-
-#homeImg::after {
-  content: "";
-  border-radius: 5px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#homeImg:hover {
-  -webkit-transform: scale(1.01, 1.01);
-  transform: scale(1.01, 1.01);
-  box-shadow: 0 0 8px 8px #2a4f3d;
-}
-
-#homeImg:hover::after {
-  opacity: 1;
-  -webkit-transform: scale(1.01, 1.01);
-  transform: scale(1.01, 1.01);
-}
 
 #aboutMyself {
   text-align: left;
@@ -115,7 +116,7 @@ h1 {
   border-radius: 16px;
 } #aboutMyself h2 {
   font-size: 34px;
-  margin: 20px 20px 20px 0px;
+  margin: 0px 20px 20px 0px;
 } #aboutMyself p {
   font-size: 18px;
 } 
@@ -127,27 +128,28 @@ h1 {
   padding: 0;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-} #aboutImg img::after {
-  content: "";
+} 
+
+.homeArt{
+  display: flex;
+  flex: 1;
+}
+
+#whatIDo img {
+  margin: 0px 10px;
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border: 6px solid rgb(0, 0, 0);
   border-radius: 5px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0;
+  box-shadow: 0 0 4px 4px #2a4f3d;
+  padding: 0;
+  border: 6px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0 0 4px 4px #2a4f3d;
+  padding: 0;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-} #aboutImg img:hover {
-  box-shadow: 0 0 8px 8px #2a4f3d;
-  -webkit-transform: scale(1.01, 1.01);
-  transform: scale(1.01, 1.01);
-} #aboutImg img:hover::after {
-  opacity: 1;
-  -webkit-transform: scale(1.01, 1.01);
-  transform: scale(1.01, 1.01);
 } 
 
 .nav-link {
@@ -212,12 +214,15 @@ h1 {
 .artCard {
   background-color: #282c34 !important;
   color: white;
-  width: 36rem !important;
-  height: 36rem !important;
+  width: 520px !important;
+  height: 520px !important;
   margin: auto;
   align-self: center;
   margin-bottom: 10px;
   padding-top: 15px !important;
+} .artCard img {
+  object-fit: cover;
+  height: 420px;
 }
 
 #resumeWrapper {
@@ -253,10 +258,6 @@ h1 {
   height: 55px;
 }
 
-p {
-  color: white;
-}
-
 #resumeWrapper .card {
   height: 300px;
 }
@@ -266,8 +267,8 @@ p {
 }
 
 .bigSkillWrapper {
-  width: 26rem !important;
-  height: 360px;
+  width: 360px !important;
+  height: 260px;
   display: flex;
   flex: 1;
   flex-flow: row;
@@ -275,32 +276,38 @@ p {
 }
 
 .bigSkill {
-  background-color: #282c34 !important;
-  color: white;
-  width: 300px !important;
-  margin: 26px;
-  margin-bottom: 10px;
-  padding: 10px;
+  position: relative;
+  background-color: rgb(233, 224, 224) !important;
+  color: black;
+  width: 220px !important;
+  height: 220px;
+  margin: 40px;
   align-self: center;
+  margin-bottom: 10px;
+  padding: 0px !important;
   transition: 0.5s;
 } .bigSkill img {   
+  width: 218px;
+  height: 218px;
+  object-fit: scale-down;
   z-index: 1;
   align-self: center;
 } 
 
 .bigSkill:hover {
-  height: 360px;
+  height: 300px;
   transition: 0.5s;
   transition-timing-function: ease;
-  background-color: #2a4f3d !important;
+  background-color: #a3cfba !important;
 }
 
 .bigSkillExtra {
+  color: black;
   z-index: 0;
   position:relative;
   opacity: 0;
   transition: 0.5s;
-  margin-top: -60px;
+  margin-top: -70px;
 }
 .bigSkill:hover .bigSkillExtra {
   /* -webkit-animation: moving 1s;
@@ -312,11 +319,13 @@ p {
 }
 
 .smallSkillWrapper{
-  width: 16rem !important;
-  height: 360px;
+  width: 300px !important;
+  height: 300px;
   display: flex;
   flex: 1;
   flex-flow: column;
+  padding-left: 170px !important;
+  padding-right: 170px !important;
 }
 
 .smallSkill {
@@ -324,16 +333,16 @@ p {
   background-color: #282c34 !important;
   color: white;
   width: 190px !important;
-  height: 50%;
+  height: 190px;
   margin: 40px;
   align-self: center;
-  margin-bottom: 10px;
   padding: 0px !important;
   transition: 0.5s;
 } .smallSkill .card-img-top {
   width: 160px;
 } .smallSkill img { 
   z-index: 1;
+  object-fit: scale-down;
 } 
 .smallSkill:hover {
   width: 460px !important;
