@@ -36,8 +36,8 @@ export default function Home() {
                         <h1>What I do...</h1>
                         <div className="row">
                             <div className="col-9 homeArt">
-                                <img src="assets/images/placeholder-01.png"/>
-                                <img className="d-flex" src="assets/images/placeholder-01.png"/>
+                                <img src="assets/images/placeholder-01.png" alt=""/>
+                                <img className="d-flex" src="assets/images/placeholder-01.png" alt=""/>
                             </div>
                             <div className="col-3">
                                 <p>I create websites</p>
@@ -50,8 +50,8 @@ export default function Home() {
                                 <p>And I create pixel art</p>
                             </div>
                             <div className="col-9 homeArt">
-                                <img src="assets/images/desk-brb-animation.gif"/>
-                                <img className="d-flex" src="assets/images/ram-skull.png"/>
+                                <img src="assets/images/desk-brb-animation.gif" alt=""/>
+                                <img className="d-flex" src="assets/images/ram-skull.png" alt=""/>
                             </div>
                 
                         </div>
