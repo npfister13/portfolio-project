@@ -12,8 +12,6 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
                 items.map((item, index) => {
                     tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
                     if (index < itemsPerScreen){
-                        console.log('in the if')
-                        console.log('pps ' + itemsPerScreen)
                         return (
                             <Card className="projectCard" key={item.id}>
                                 <Card.Img variant="top" src={item.image} />
@@ -112,7 +110,6 @@ export default class Projects extends Component {
                 <NavTab/>
                 <div className="projects">
                     <div className="container">
-                        <h1>Projects</h1>
                         <RenderItem items={this.state.projects} itemsPerScreen={this.state.projectsPerScreen} itemsDisplayArray={this.state.projectsDisplayArray} />
                         {moreProjects}
                         {lessProjects}

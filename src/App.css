@@ -59,6 +59,65 @@ body {
   -webkit-transform: scale(1.01, 1.01);
   transform: scale(1.01, 1.01);
 }
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-2%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+.artworks {
+  animation: .5s ease-out 0s 1 slideInFromTop;
+}
+
+.artworks img {
+  border: 6px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0 0 4px 4px #2a4f3d;
+  padding: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #282c34 !important;
+  color: white;
+  max-width: 520px !important;
+  height: 520px !important;
+  width: auto\9;
+  margin: 20px auto;
+  align-self: center;
+  object-fit: cover;
+} 
+
+.artworks img::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.artworks img:hover {
+  -webkit-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+  box-shadow: 0 0 8px 8px #2a4f3d;
+}
+
+.artworks img:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1.01, 1.01);
+  transform: scale(1.01, 1.01);
+}
  
 .infoPanelText {
   font-size: 30px;
@@ -267,68 +326,13 @@ body {
 }
 
 .bigSkillWrapper {
-  width: 360px !important;
-  height: 260px;
-  display: flex;
-  flex: 1;
-  flex-flow: row;
-  justify-content: center;
-}
-
-.bigSkill {
-  position: relative;
-  background-color: rgb(233, 224, 224) !important;
-  color: black;
-  width: 220px !important;
-  height: 220px;
-  margin: 40px;
-  align-self: center;
-  margin-bottom: 10px;
-  padding: 0px !important;
-  transition: 0.5s;
-} .bigSkill img {   
-  width: 218px;
-  height: 218px;
-  object-fit: scale-down;
-  z-index: 1;
-  align-self: center;
-} 
-
-.bigSkill:hover {
-  height: 300px;
-  transition: 0.5s;
-  transition-timing-function: ease;
-  background-color: #a3cfba !important;
-}
-
-.bigSkillExtra {
-  color: black;
-  z-index: 0;
-  position:relative;
-  opacity: 0;
-  transition: 0.5s;
-  margin-top: -70px;
-}
-.bigSkill:hover .bigSkillExtra {
-  /* -webkit-animation: moving 1s;
-  animation: moving 1s; */
-  margin-top: -5px;
-  opacity: 1;
-  transition: 0.5s;
-  
-}
-
-.smallSkillWrapper{
   width: 300px !important;
-  height: 300px;
   display: flex;
   flex: 1;
   flex-flow: column;
-  padding-left: 170px !important;
-  padding-right: 170px !important;
 }
 
-.smallSkill {
+.bigSkill {
   position: relative;
   background-color: #282c34 !important;
   color: white;
@@ -338,20 +342,26 @@ body {
   align-self: center;
   padding: 0px !important;
   transition: 0.5s;
-} .smallSkill .card-img-top {
-  width: 160px;
-} .smallSkill img { 
+} .bigSkill .card-img-top {
+  width: 155px;
+} .bigSkill img { 
   z-index: 1;
   object-fit: scale-down;
-} 
-.smallSkill:hover {
-  width: 460px !important;
+  background-color: #282c34;
+  transition: 0.5s;
+} .bigSkill:hover img {
+  background-color: #2a4f3d;
+  transition: 0.5s;
+}
+
+.bigSkill:hover {
+  width: 320px !important;
   transition: 0.5s;
   transition-timing-function: ease;
   background-color: #2a4f3d !important;
 }
 
-.smallSkillExtra {
+.bigSkillExtra {
   width: 100px !important;
   z-index: 0;
   position:relative;
@@ -362,10 +372,68 @@ body {
   margin-bottom: auto;
   margin-right: auto;
 }
-.smallSkill:hover .smallSkillExtra {
+.bigSkill:hover .bigSkillExtra {
   margin-left: 0px;
   opacity: 1;
   transition: .5s;
+}
+.bigSkill .card-header {
+  display: flex;
+  flex: 2;
+}
+
+.smallSkillWrapper{
+  width: 200px !important;
+  height: 200px;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
+
+.smallSkill {
+  background-color: #282c34 !important;
+  color: white;
+  width: 120px !important;
+  height: 120px;
+  margin: 40px;
+  align-self: center;
+  padding: 0px !important;
+  transition: 0.5s;
+} .smallSkill .card-img-top {
+  width: 90px;
+} .smallSkill img { 
+  z-index: 1;
+  object-fit: scale-down;
+  background-color: #282c34;
+  transition: 0.5s;
+} .smallSkill:hover img {
+  background-color: #2a4f3d;
+  transition: 0.5s;
+}
+
+.smallSkill:hover {
+  width: 340px !important;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  background-color: #2a4f3d !important;
+}
+
+.smallSkillExtra {
+  width: 100px !important;
+  z-index: 0;
+  position:relative;
+  opacity: 0;
+  transition: 0.2s;
+  margin-left: -190px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+.smallSkill:hover .smallSkillExtra {
+  margin-left: 0px;
+  opacity: 1;
+  transition-delay: 0.1s;
+  transition-duration: .5s;
 }
 
 .smallSkill .card-header {

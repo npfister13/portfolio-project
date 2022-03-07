@@ -41,41 +41,12 @@ function RenderBigSkill({skills}) {
         <div className="row">
             {
                 skills.map((skill) => {
-                    if (skill.big){
                         return(
-                            <div className="bigSkillWrapper">
-                                <Card className="bigSkill flex-row flex-wrap"  key={skill.id}>
-                                    <Card.Img variant="top" src={skill.image} />
-                                    <Card.Body className="bigSkillExtra">
-                                        <Card.Title>{skill.skillName}</Card.Title>
-                                        <Card.Text>{skill.description}</Card.Text>
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                        )
-                    }
-                    else {
-                        return null
-                    }
-                })
-            }
-        </div>
-    )
-}
-
-function RenderSmallSkill({skills}) {
-    console.log(skills)
-    return (
-        <div className="row justify-content-center">
-            {
-                skills.map((skill, index) => {
-                    if (!skill.big){
-                        return(
-                            <div className='smallSkillWrapper'>
-                                <Card className="smallSkill" key={skill.id}>
+                            <div className='bigSkillWrapper'>
+                                <Card className="bigSkill" key={skill.id}>
                                     <Card.Header>
                                         <Card.Img variant="top" src={skill.image}/>
-                                        <Card.Body className="smallSkillExtra">
+                                        <Card.Body className="bigSkillExtra">
                                             <Card.Title>{skill.skillName}</Card.Title>
                                             <Card.Text>{skill.description}</Card.Text>
                                         </Card.Body>
@@ -83,16 +54,42 @@ function RenderSmallSkill({skills}) {
                                 </Card>
                             </div>
                         )
-                    }
-                    else {
-                        return null
-                        
-                    }
                 })
             }
         </div>
     )
 }
+
+// function RenderSmallSkill({skills}) {
+//     console.log(skills)
+//     return (
+//         <div className="row justify-content-center">
+//             {
+//                 skills.map((skill, index) => {
+//                     if (!skill.big){
+//                         return(
+//                             <div className='smallSkillWrapper'>
+//                                 <Card className="smallSkill" key={skill.id}>
+//                                     <Card.Header>
+//                                         <Card.Img variant="top" src={skill.image}/>
+//                                         <Card.Body className="smallSkillExtra">
+//                                             <Card.Title>{skill.skillName}</Card.Title>
+//                                             <Card.Text>{skill.description}</Card.Text>
+//                                         </Card.Body>
+//                                     </Card.Header>
+//                                 </Card>
+//                             </div>
+//                         )
+//                     }
+//                     else {
+//                         return null
+                        
+//                     }
+//                 })
+//             }
+//         </div>
+//     )
+// }
 
 
 
@@ -104,7 +101,6 @@ export default function Resume() {
     return ( 
         <React.Fragment>
             <NavTab />
-            <h1>Resume.</h1>
             <div id="resumeWrapper">
                 <section id="resume">
                     <div className="container">
@@ -188,9 +184,9 @@ export default function Resume() {
                 <div className="col-12">
                     <RenderBigSkill skills={skills} />
                 </div>
-                <div className='col-12'>
+                {/* <div className='col-12'>
                     <RenderSmallSkill skills={skills} />
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )

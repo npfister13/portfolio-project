@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NavTab from "./NavTab";
-import { Card } from "react-bootstrap";
 import { ARTWORKS } from "../shared/artworks";
 
 function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
@@ -11,20 +10,8 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
                 items.map((item, index) => {
                     tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
                     if (index < itemsPerScreen){
-                        console.log('in the if')
-                        console.log('pps ' + itemsPerScreen)
                         return (
-                            <Card className="artCard" key={item.id}>
-                                <Card.Img variant="top" src={item.image} />
-                                <Card.Body>
-                                    <Card.Title>{item.name}</Card.Title>
-                                    <Card.Text>
-                                        {item.description}
-                                    </Card.Text>
-                                    
-                                </Card.Body>
-                                {/* <button className="btn align-self-center">Go somewhere</button> */}
-                            </Card>
+                            <img src={item.image} alt={item.alt}/>
 
                         )
                     }
@@ -39,7 +26,7 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
 
 function MoreButton(props) {
     return(
-        <button className="btn" onClick={props.onClick}>
+        <button className="btn moreArtworks" onClick={props.onClick}>
             Load More
         </button>
     )
@@ -47,7 +34,7 @@ function MoreButton(props) {
 
 function LessButton(props) {
     return(
-        <button className="btn" onClick={props.onClick}>
+        <button className="btn lessArtworks" onClick={props.onClick}>
             Show Less
         </button>
     )
@@ -63,21 +50,6 @@ export default class Artwork extends Component {
             artworksDisplayArray: [],
         }
     }
-
-    increaseProjectCount = () => {
-        if (this.state.artworksPerScreen >= this.state.artworks.length){
-        }
-        else {
-            this.setState({artworksPerScreen: this.state.artworksPerScreen + 2})
-            console.log(this.state.artworksPerScreen)
-        }
-    }
-
-    decreaseProjectCount = () => {
-        this.setState({artworksPerScreen: this.state.artworksPerScreen - 2})
-        console.log(this.state.artworksPerScreen)
-    }
-
     increaseArtworkCount = () => {
         if (this.state.artworksPerScreen >= this.state.artworks.length){
         }
@@ -110,9 +82,7 @@ export default class Artwork extends Component {
             <React.Fragment>
                 <NavTab/>
                 <div className="artworks">
-                    <h1>Artwork</h1>
                     <div className="container">
-                        {/* <h1>Artwork:</h1> */}
                         <RenderItem items={this.state.artworks} itemsPerScreen={this.state.artworksPerScreen} itemsDisplayArray={this.state.artworksDisplayArray} />
                         
                         {moreArtworks}

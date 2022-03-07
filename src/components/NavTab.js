@@ -19,7 +19,6 @@ export default function NavTab() {
                 </div>
             </div>
             <Navbar dark sticky="top" expand="sm">
-            
                 <NavbarToggler onClick={() => {
                     toggleNav(!isNavOpen)
                     console.log(isNavOpen)
@@ -31,11 +30,6 @@ export default function NavTab() {
                                 Home
                             </NavLink>
                         </NavItem>
-                        {/* <NavItem>
-                            <NavLink className="nav-link" to="/about">
-                                <i className="fa fa-list fa-lg"/> About
-                            </NavLink>
-                        </NavItem> */}
                         <NavItem>
                             <NavLink className="nav-link" to="/contact">
                                 <i className="fa fa-info fa-lg"/> Contact
@@ -57,8 +51,6 @@ export default function NavTab() {
                             </NavLink>
                         </NavItem>
                     </Nav>
-                    <span className="navbar-text ml-auto">
-                    </span>
                 </Collapse>
             </Navbar>
 
