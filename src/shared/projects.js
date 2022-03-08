@@ -7,7 +7,7 @@ export const PROJECTS = [
     },
     {
         id: 1,
-        name: "Deep Rock Cafe Mobile App",
+        name: "Deep Rock Cafe",
         description: "Mobile ordering app for a ficticious Cafe where you can view the menu, contact the cafe, and order items through the app.",
         image: "./assets/images/placeholder-01.png"
     },

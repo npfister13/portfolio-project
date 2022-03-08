@@ -5,7 +5,7 @@ import { ARTWORKS } from "../shared/artworks";
 function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
     const tempArray = itemsDisplayArray;
     return( 
-        <div className="row">
+        <ul className="row artworksList">
             {                 
                 items.map((item, index) => {
                     tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
@@ -20,7 +20,7 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
                     }
                 })
             }
-        </div>
+        </ul>
     )
 }
 

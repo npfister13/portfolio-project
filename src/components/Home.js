@@ -6,17 +6,6 @@ export default function Home() {
         <React.Fragment>
             <NavTab />
             <div className="homeWrapper">
-                {/* <div id="infoPanel" className="container-fluid">
-                    <div className="row">
-                        <div className="container">
-                            <div className="row center" id="infoPanelBody">
-                                <img id="homeImg" className="d-flex center m-auto width-150" src="assets/images/alright this is a different pose i swear.png" alt="" />
-                                <p className="infoPanelText">Hey. I'm Nicholas. <br />I create websites, apps, and pixel art.</p>
-                                <p className="infoPanelText">Check out some of my <a href="/projects">projects</a> and <a href='/artwork'>artwork</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 <section id="about" className="p-5">
                     <div className="container">
                         <div className="row about">

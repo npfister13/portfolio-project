@@ -31,11 +31,6 @@ export default function NavTab() {
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="nav-link" to="/contact">
-                                <i className="fa fa-info fa-lg"/> Contact
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
                             <NavLink className="nav-link" to="/projects">
                                 <i className="fa fa-address-card fa-lg"/> Projects
                             </NavLink>
@@ -48,6 +43,11 @@ export default function NavTab() {
                         <NavItem>
                             <NavLink className="nav-link" to="/Resume">
                                 <i className="fa fa-address-card fa-lg"/> Resume
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="nav-link" to="/contact">
+                                <i className="fa fa-info fa-lg"/> Contact
                             </NavLink>
                         </NavItem>
                     </Nav>
