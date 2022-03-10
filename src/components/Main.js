@@ -5,6 +5,7 @@ import Projects from './Projects';
 import Resume from './Resume';
 import Home from './Home';
 import Artwork from './Artwork'
+import Loading from './Loading';
 import { Routes, Route } from 'react-router-dom';
 
 export default function Main() {
@@ -16,6 +17,7 @@ export default function Main() {
                 <Route path="/artwork" element={<Artwork />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/loading" element={<Loading />} />
             </Routes>
         </React.Fragment>
     )

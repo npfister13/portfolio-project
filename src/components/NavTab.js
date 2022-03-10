@@ -12,7 +12,8 @@ export default function NavTab() {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <h1 id="myName">Nicholas Pfister</h1>
+                            {/* <h1 id="myName">Nicholas Pfister</h1> */}
+                            <img id="headerImg" src="./assets/images/myname.png" alt="Nicholas Pfister"/>
                             <h2 id="subtitle" className='pt-3'>Programmer | Artist</h2>
                         </div>
                     </div>

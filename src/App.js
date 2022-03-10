@@ -1,18 +1,31 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import Main from './components/Main';
+import Loading from './components/Loading';
 import { BrowserRouter }  from 'react-router-dom';
 import './App.css';
 
-class App extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-              <div className="App">
-                  <Main />
-              </div>
-            </BrowserRouter>
-        );
-    }
-}
 
+function App(){
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 4850)
+    }, [])
+    
+
+    return (
+        <>
+            {loading === false ? (
+                <BrowserRouter>
+                    <div className="App">
+                        <Main />
+                    </div>
+                </BrowserRouter>
+            ) : (
+                <Loading />
+            )}            
+        </>
+    );
+}
 export default App;

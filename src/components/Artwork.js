@@ -45,7 +45,7 @@ export default class Artwork extends Component {
     constructor(props){
         super(props);
         this.state = {
-            artworksPerScreen: 2,
+            artworksPerScreen: 4,
             artworks: ARTWORKS,
             artworksDisplayArray: [],
         }
@@ -73,7 +73,7 @@ export default class Artwork extends Component {
         } else {
             moreArtworks = null
         }
-        if (this.state.artworksPerScreen > 2) {
+        if (this.state.artworksPerScreen > 4) {
             lessArtworks = <LessButton onClick={this.decreaseArtworkCount} />
         } else {
             lessArtworks = null
@@ -85,6 +85,9 @@ export default class Artwork extends Component {
                     <div className="container">
                         <RenderItem items={this.state.artworks} itemsPerScreen={this.state.artworksPerScreen} itemsDisplayArray={this.state.artworksDisplayArray} />
                         
+                        
+                    </div>
+                    <div className="buttonHolder">
                         {moreArtworks}
                         {lessArtworks}
                     </div>

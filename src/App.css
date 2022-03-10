@@ -2,7 +2,47 @@
   text-align: center;
   background-color: rgb(24, 24, 24);
   color: white;
-  /* background-color: #888a8f; */
+  
+}
+
+
+.homeWrapper {
+  animation: .5s ease-out 0s 1 slideInFromTop;
+  /* animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation: fadeInAnimation ease forwards 2s; */
+}
+
+@keyframes fadeInAnimation {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html{
+  max-width: 100%;
+  overflow-x: hidden;
+  animation-name: backgroundchange;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  background-color: rgb(24, 24, 24);
+}
+
+@keyframes backgroundchange {
+  0%, 90% {
+    background-color: black;
+  }
+  100% {
+    background-color: rgb(24, 24, 24);
+  }
+}
+
+#headerImg {
+  max-width: 90%;
 }
 
 .navbar{
@@ -14,6 +54,30 @@
   padding: 10px 10px;
 }
 
+.loadingDiv {
+  position: fixed;
+  top: 45%;
+  left: 10%;
+  right: 10%;
+  animation-name: moveup;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+.loadingDiv img {
+  max-width: 72% !important;
+}
+
+@keyframes moveup {
+  0%, 70% {
+    transform: translateY(0%) translateX(0%);
+  }
+  100% {
+    transform: translateY(-755%) translateX(0%);
+
+  }
+}
+
 #myName  {
   font-size: 60px !important;
 }
@@ -22,17 +86,15 @@
   font-size: 18px !important;
 }
 
-html{
-  background-color: rgb(24, 24, 24);
-  max-width: 100%;
-  overflow-x: hidden;
+img {
+  flex: 1,
 }
 
 body {
   background-color: #282c34;
 }
 
-.homeWrapper img::after {
+.homeWrapper img::after, .homeLoadedWrapper img::after {
   content: "";
   border-radius: 5px;
   position: absolute;
@@ -48,13 +110,13 @@ body {
 }
 
 
-.homeWrapper img:hover {
+.homeWrapper img:hover, .homeLoadedWrapper img:hover {
   -webkit-transform: scale(1.01, 1.01);
   transform: scale(1.01, 1.01);
   box-shadow: 0 0 8px 8px #2a4f3d;
 }
 
-.homeWrapper img:hover::after {
+.homeWrapper img:hover::after, .homeLoadedWrapper img:hover::after {
   opacity: 1;
   -webkit-transform: scale(1.01, 1.01);
   transform: scale(1.01, 1.01);
@@ -250,10 +312,20 @@ body {
 
 .form-group {
   text-align: left;
+  min-height: 100px;
+  margin: auto;
 }
 
-.form-group {
-  margin: auto;
+.form-group label {
+  font-size: 20px;
+}
+
+.form-group input, .form-group textarea {
+  min-height: 60px;
+  border: 4px solid;
+  border-color: #68b992;  
+  border-collapse: separate;
+  border-spacing: 10px;
 }
 
 .subBtn {
@@ -275,6 +347,10 @@ body {
   color: white !important;
 } .btn:focus {
   box-shadow: 0 0 0 0.1rem rgb(225 225 225 / 25%) !important;
+}
+
+.projects{
+  animation: .5s ease-out 0s 1 slideInFromTop;
 }
 
 .projectCard {
@@ -460,6 +536,13 @@ body {
   padding-right: 0px !important;
 }
 
+.artworks ul {
+  padding-inline-start: 0px !important;
+}
+
+.buttonHolder {
+  height: 120px ;
+}
 
 /* 
 @media (prefers-reduced-motion: no-preference) {
