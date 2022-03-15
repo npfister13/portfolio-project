@@ -7,7 +7,7 @@ export default function Loading() {
 
     return(
         <div className="d-flex loadingDiv justify-content-center">
-            <img src={`./assets/images/my name animation.gif?dummy=${rngNum}`} alt="Nicholas Pfister"/>
+            <img src={`./assets/images/name animation glitch.gif?dummy=${rngNum}`} alt="Nicholas Pfister"/>
             
         </div>
     )

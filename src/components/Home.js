@@ -1,27 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import NavTab from "./NavTab";
 
-
-
 export default function Home() {
-
-    let divName = useRef(null);
-
-    const ref = useRef({
-        renderCount: 0
-    });
-    console.log(divName, ref.current.renderCount)
-    if (ref.current.renderCount === 0){
-        divName ="homeWrapper";
-        ref.current.renderCount += 1;
-    } else {     
-        divName = "homeLoadedWrapper";
-    }
 
     return(
         <React.Fragment>
             <NavTab />
-            <div className={divName}>
+            <div className="homeWrapper">
                 <section id="about" className="p-5">
                     <div className="container">
                         <div className="row about">

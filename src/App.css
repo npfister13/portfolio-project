@@ -1,10 +1,13 @@
+#root {
+  background-color: rgb(24, 24, 24);
+}
+
 .App {
   text-align: center;
   background-color: rgb(24, 24, 24);
   color: white;
-  
+  animation: 0.5s ease-out 0s 1 slideInFromTop;
 }
-
 
 .homeWrapper {
   animation: .5s ease-out 0s 1 slideInFromTop;
@@ -25,15 +28,15 @@
 html{
   max-width: 100%;
   overflow-x: hidden;
-  animation-name: backgroundchange;
+  /* animation-name: backgroundchange; */
   animation-play-state: running;
   animation-iteration-count: 1;
-  animation-duration: 4s;
+  animation-duration: 2s;
   background-color: rgb(24, 24, 24);
 }
 
 @keyframes backgroundchange {
-  0%, 90% {
+  0%, 85%{
     background-color: black;
   }
   100% {
@@ -59,23 +62,12 @@ html{
   top: 45%;
   left: 10%;
   right: 10%;
-  animation-name: moveup;
   animation-play-state: running;
   animation-iteration-count: 1;
   animation-duration: 5s;
 }
 .loadingDiv img {
   max-width: 72% !important;
-}
-
-@keyframes moveup {
-  0%, 70% {
-    transform: translateY(0%) translateX(0%);
-  }
-  100% {
-    transform: translateY(-755%) translateX(0%);
-
-  }
 }
 
 #myName  {

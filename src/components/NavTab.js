@@ -6,6 +6,7 @@ export default function NavTab() {
 
     const [isNavOpen, toggleNav] = useState(false)
 
+    
     return(
         <React.Fragment>
             <div className="mt-4 p-5 text-white rounded fluid">
