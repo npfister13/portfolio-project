@@ -70,83 +70,108 @@ export default function Resume() {
         <React.Fragment>
             <NavTab />
             <div id="resumeWrapper">
-                <section id="resume">
-                    <div className="container">
-                        <DividerWithText>Education</DividerWithText>
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="row">
-                                    <div className="col col-10 span-10 positionTitle">
-                                        <p>
-                                            <strong>NuCamp</strong><br/>
-                                            Full Stack Development Bootcamp
-                                            <br/>
-                                        </p>
-                                        <p>
-                                            <strong>University of Kentucky</strong><br/>
-                                            Master of Business Administration
-                                            <br/>
-                                        </p>
-                                        <p>
-                                            <strong>University of Kentucky</strong><br/>
-                                            B.S. in Information Communication Technology
-                                            <br/>
-                                        </p>
-                                    </div>
-                                    <div className="col col-2 span-2 positionYear">
-                                        <p id='nucampYear'>2022</p>
-                                        <p id='mbaYear'>2019</p>
-                                        <p id='ictYear'>2018</p>
-                                    </div>
+                <div className="container">
+                    <DividerWithText>Education</DividerWithText>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="row align-items-center">
+                                <div className="col-8 col-sm-10 positionTitle">
+                                    <p>
+                                        <strong>NuCamp</strong><br/>
+                                        Full Stack Development Bootcamp
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='nucampYear'>2022</p>
+                                </div>
+                            </div>
+                            <div className="row align-items-center">
+                                <div className="col-8 col-sm-10 positionTitle">
+                                    <p>
+                                        <strong>University of Kentucky</strong><br/>
+                                        Master of Business Administration
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='nucampYear'>2019</p>
+                                </div>
+                            </div>
+                            <div className="row align-items-center">
+                                <div className="col-8 col-sm-10 positionTitle">
+                                    <p>
+                                        <strong>University of Kentucky</strong><br/>
+                                        B.S. in Information Communication Technology
+                                        <br/>
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='ictYear'>2018</p>
                                 </div>
                             </div>
                         </div>
-                        <DividerWithText>Work</DividerWithText>
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="row">
-                                    <div className="col col-10 span-10 positionTitle">
-                                        <p>
-                                            <strong>Freelance Designer</strong><br/>
-                                            Created artwork and animations for video games<br/>
-                                            and promotional purposes.
-                                        </p>
-                                        <p>
-                                            <strong>Ozmo Inc.</strong> <br/>
-                                            Content Developer Squad Lead
-                                            <br/>
-                                            Create an emulated experience for smart phones and devices<br/>using Photoshop and
-                                            in-house XML.<br/>Managed projects to reach deadlines efficiently.
-                                        </p>
-                                        <p>
-                                            <strong>Schneider Electric</strong><br/>
-                                            Project Connect Intern<br/>
-                                            Analyzed supply chain methods and researched<br/>manufacturing methods to reduce product deficiencies.
-                                        </p>
-                                        <p>
-                                            <strong>Lexmark</strong><br/>
-                                            Project Connect Intern<br/>
-                                            Assisted in analying the buyer's journey to develop solutions<br/>
-                                            in order to incrase sales and imrpove customer relationships.
-                                        </p>
-                                        
-                                    </div>
-                                    <div className="col col-2 span-2 positionYear">
-                                        <p id='fdYear'>Present</p>
-                                        <p id='ozYear'>Aug 19 - Jul 21</p>
-                                        <p id='schYear'>Jan 19 - May 19</p>
-                                        <p id='lexYear'>Aug 18 - Dec 18</p>
-                                    </div>
+                    </div>
+                    <DividerWithText>Work</DividerWithText>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="row align-items-center">
+                                <div className='col-8 col-sm-10 positionTitle'>
+                                    <p>
+                                        <strong>Freelance Designer</strong><br/>
+                                        Created artwork and animations for video games<br/>
+                                        and promotional purposes.
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='fdYear'>Present</p>
+                                </div>
+                            </div>
+                            <div className='row align-items-center'>
+                                <div className='col-8 col-sm-10 positionTitle'>
+                                    <p>
+                                        <strong>Ozmo Inc.</strong> <br/>
+                                        Content Developer Squad Lead
+                                        <br/>
+                                        Create an emulated experience for smart phones and devices<br/>using Photoshop and
+                                        in-house XML.<br/>Managed projects to reach deadlines efficiently.
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='ozYear'>Aug 19 - Jul 21</p>
+                                </div>
+                            </div>
+                            <div className='row align-items-center'>
+                                <div className='col-8 col-sm-10 positionTitle'>
+                                    <p>
+                                        <strong>Schneider Electric</strong><br/>
+                                        Project Connect Intern<br/>
+                                        Analyzed supply chain methods and researched<br/>manufacturing methods to reduce product deficiencies.
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                <p id='schYear'>Jan 19 - May 19</p>
+                                </div>
+                            </div>
+                            <div className='row align-items-center'>
+                                <div className='col-8 col-sm-10 positionTitle'>
+                                    <p>
+                                        <strong>Lexmark</strong><br/>
+                                        Project Connect Intern<br/>
+                                        Assisted in analying the buyer's journey to develop solutions<br/>
+                                        in order to incrase sales and imrpove customer relationships.
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='lexYear'>Aug 18 - Dec 18</p>
                                 </div>
                             </div>
                         </div>
-                        
-                        <DividerWithText>Skills</DividerWithText>
-                        
                     </div>
                     
-                </section>
-                
+                    <DividerWithText>Skills</DividerWithText>
+                    
+                </div>
             </div>
             <div className="container skillContainer">
                 <div className="col-12">

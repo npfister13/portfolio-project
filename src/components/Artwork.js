@@ -12,7 +12,6 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
                     if (index < itemsPerScreen){
                         return (
                             <img src={item.image} alt={item.alt}/>
-
                         )
                     }
                     else {
@@ -84,7 +83,6 @@ export default class Artwork extends Component {
                 <div className="artworks">
                     <div className="container">
                         <RenderItem items={this.state.artworks} itemsPerScreen={this.state.artworksPerScreen} itemsDisplayArray={this.state.artworksDisplayArray} />
-                        
                         
                     </div>
                     <div className="buttonHolder">
