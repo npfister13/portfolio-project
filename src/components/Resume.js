@@ -48,7 +48,8 @@ function RenderBigSkill({skills}) {
                                         <Card.Img variant="top" src={skill.image}/>
                                         <Card.Body className="bigSkillExtra">
                                             <Card.Title>{skill.skillName}</Card.Title>
-                                            <Card.Text>{skill.description}</Card.Text>
+                                            <Card.Text><strong>{skill.description}</strong></Card.Text>
+                                            <Card.Text>{skill.years}</Card.Text>
                                         </Card.Body>
                                     </Card.Header>
                                 </Card>
@@ -59,39 +60,6 @@ function RenderBigSkill({skills}) {
         </div>
     )
 }
-
-// function RenderSmallSkill({skills}) {
-//     console.log(skills)
-//     return (
-//         <div className="row justify-content-center">
-//             {
-//                 skills.map((skill, index) => {
-//                     if (!skill.big){
-//                         return(
-//                             <div className='smallSkillWrapper'>
-//                                 <Card className="smallSkill" key={skill.id}>
-//                                     <Card.Header>
-//                                         <Card.Img variant="top" src={skill.image}/>
-//                                         <Card.Body className="smallSkillExtra">
-//                                             <Card.Title>{skill.skillName}</Card.Title>
-//                                             <Card.Text>{skill.description}</Card.Text>
-//                                         </Card.Body>
-//                                     </Card.Header>
-//                                 </Card>
-//                             </div>
-//                         )
-//                     }
-//                     else {
-//                         return null
-                        
-//                     }
-//                 })
-//             }
-//         </div>
-//     )
-// }
-
-
 
 
 export default function Resume() {
@@ -184,9 +152,6 @@ export default function Resume() {
                 <div className="col-12">
                     <RenderBigSkill skills={skills} />
                 </div>
-                {/* <div className='col-12'>
-                    <RenderSmallSkill skills={skills} />
-                </div> */}
             </div>
         </React.Fragment>
     )

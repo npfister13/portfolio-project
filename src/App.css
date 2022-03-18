@@ -114,6 +114,18 @@ body {
   transform: scale(1.01, 1.01);
 }
 
+.fa-github-square {
+  color: #2a4f3d;
+  background-color: rgb(24, 24, 24);
+  border: 1px solid #68b992;
+  border-radius: 12px;
+  margin: auto;
+  padding: 0px 4px;
+}
+.fa-github-square ::before {
+  justify-content: center;
+  vertical-align: auto;
+}
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-2%);
@@ -300,6 +312,7 @@ body {
 
 .contact {
   color: white;
+  animation: 0.5s ease-out 0s 1 slideInFromTop;
 }
 
 .form-group {
@@ -349,11 +362,16 @@ body {
   background-color: #282c34 !important;
   color: white;
   width: 26rem !important;
-  height: 450px;
+  height: 480px;
   margin: auto;
   align-self: center;
   margin-bottom: 10px;
   padding-top: 15px !important;
+  overflow: hidden;
+} .projectCard img {
+  object-fit: scale-down;
+  height: 237px;
+  overflow: hidden;
 }
 
 .artCard {
@@ -371,6 +389,7 @@ body {
 }
 
 #resumeWrapper {
+  animation: .5s ease-out 0s 1 slideInFromTop;
   display: block;
   width: 50%;
   margin: auto;
@@ -458,6 +477,9 @@ body {
   margin-bottom: auto;
   margin-right: auto;
 }
+.bigSkillExtra p {
+  margin: 0;
+}
 .bigSkill:hover .bigSkillExtra {
   margin-left: 0px;
   opacity: 1;
@@ -467,6 +489,11 @@ body {
   display: flex;
   flex: 2;
 }
+.bigSkill .card-title {
+  font-size: 20px;
+}
+
+
 
 .smallSkillWrapper{
   width: 200px !important;

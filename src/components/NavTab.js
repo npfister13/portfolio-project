@@ -34,22 +34,22 @@ export default function NavTab() {
                         </NavItem>
                         <NavItem>
                             <NavLink className="nav-link" to="/projects">
-                                <i className="fa fa-address-card fa-lg"/> Projects
+                                Projects
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className="nav-link" to="/artwork">
-                                <i className="fa fa-address-card fa-lg"/> Artwork
+                                Artwork
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className="nav-link" to="/Resume">
-                                <i className="fa fa-address-card fa-lg"/> Resume
+                                Resume
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink className="nav-link" to="/contact">
-                                <i className="fa fa-info fa-lg"/> Contact
+                                Contact
                             </NavLink>
                         </NavItem>
                     </Nav>

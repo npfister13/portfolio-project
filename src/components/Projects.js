@@ -22,7 +22,14 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
                                     </Card.Text>
                                     
                                 </Card.Body>
-                                <button className="btn align-self-center">Go somewhere</button>
+                                {
+                                    item.github ? (
+                                        <a href={item.github} aria-label="Github Link" target="_blank" rel="noopener noreferrer"><i className="fa fa-github-square fa-4x" aria-hidden="true"/><title>Github</title></a>
+                                    ) : (
+                                        null
+                                    ) 
+                                    
+                                }
                             </Card>
 
                         )

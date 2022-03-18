@@ -16,7 +16,7 @@ export default function Home() {
                             <div className='col-lg-8' id="aboutMyself">
                                 <small>A little something...</small>
                                 <h2><i>About Myself</i></h2>
-                                <p>I graduated from the University of Kentucky with my Bachelor of Science in Information Communication Technology and Master of Business Administration. I'm a graduate from Nucamp Coding Bootcamp with a focus in learning Full Stack development. I have experience with creating websites with just HTML/CSS and Javascript, but also using frameworks like React and Bootstrap. I'm very interested in website development and want to some day make my own video game.</p>
+                                <p>I'm a front-end web developer, passionate about art, design, and optimizing the user experience for client websites. I utilize HTML/CSS and Javascript, as well as libraries and frameworks like React and Bootstrap, to create websites and applications that solve problems. When I'm not working on improving my coding skills, I often work on art commissions for pixel art, animations, and logos. In my free time, I enjoy playing video games and going on walks with my two energetic dogs, Luna and Misha. Browse my website to learn more about me and explore my previous coding projects and art commissions. Feel free to reach out for more info.</p>
                             </div>
                         </div>
                     </div>
