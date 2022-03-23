@@ -11,7 +11,7 @@ export default function Home() {
                     <div className="container">
                         <div className="row about align-items-center">
                             <div className='col-12 col-lg-4' id="aboutImg">
-                                <img className="d-flex m-auto" src="assets/images/self portrait1-1.png" alt="" />
+                                <img className="d-flex m-auto" src="assets/images/portfolio-picture.jpg" alt="" />
                             </div>
                             <div className='col-12 col-lg-8' id="aboutMyself">
                                 <small>A little something...</small>
