@@ -13,8 +13,8 @@ export default function NavTab() {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            {/* <h1 id="myName">Nicholas Pfister</h1> */}
-                            <img id="headerImg" src="./assets/images/myname.png" alt="Nicholas Pfister"/>
+                            <h1 id="myName">NICHOLAS<span id="invisSpace"> </span>PFISTER</h1>
+                            {/* <img id="headerImg" src="./assets/images/myname.png" alt="Nicholas Pfister"/> */}
                             <h2 id="subtitle" className='pt-3'>Programmer | Artist</h2>
                         </div>
                     </div>
@@ -27,28 +27,28 @@ export default function NavTab() {
                     }} />
                 <Collapse isOpen={isNavOpen} navbar>
                     <Nav navbar className='m-auto'>
-                        <NavItem active>
-                            <NavLink className="nav-link" to="/">
+                        <NavItem className="glitch" active>
+                            <NavLink className="nav-link"  to="/">
                                 Home
                             </NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/projects">
+                        <NavItem className="glitch">
+                            <NavLink className="nav-link navProjects" to="/projects">
                                 Projects
                             </NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/artwork">
+                        <NavItem className="glitch">
+                            <NavLink className="nav-link navArtwork" to="/artwork">
                                 Artwork
                             </NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/Resume">
+                        <NavItem className="glitch">
+                            <NavLink className="nav-link navResume" to="/Resume">
                                 Resume
                             </NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/contact">
+                        <NavItem className="glitch">
+                            <NavLink className="nav-link navContact" to="/contact">
                                 Contact
                             </NavLink>
                         </NavItem>

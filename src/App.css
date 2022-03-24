@@ -66,21 +66,53 @@ html{
 }
 
 
+
 .loadingDiv {
   position: fixed;
   top: 45%;
   left: 10%;
   right: 10%;
-  animation-play-state: running;
-  animation-iteration-count: 1;
-  animation-duration: 5s;
 }
 .loadingDiv img {
   max-width: 72% !important;
 }
 
 #myName  {
-  font-size: 60px !important;
+  visibility: visible;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 64px !important;
+  text-shadow: 0.1rem 0 0.1 rem red, -0.125rem 0 0.1rem blue;
+  animation: textfadein 1s 1, textloadin 0.01s 50 1.21s alternate
+}
+
+@keyframes textfadein {
+  0% {
+    opacity: 0;
+    text-shadow: 12px 0 0 red, -20px 0 0 blue;
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 20px 0 1 red, -18px 0 1 blue;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 18px 0.5 4px red, -20px -0.5px 4px blue;
+  }
+}
+
+@keyframes textloadin {
+  from {
+    text-shadow: 6px 0 0 red, -9px 0 0 blue;
+  }  
+  to {
+    text-shadow: 5px 0.5 4px red, -7px -0.5px 4px blue;
+  }
+}
+
+#invisSpace {
+  letter-spacing: -30px !important;
 }
 
 #subtitle{
@@ -310,11 +342,28 @@ body {
   color: rgb(102, 102, 102) !important;
 }
 
+.glitch :hover {
+  color: white !important;
+  text-shadow: 0.1rem 0 0.1 rem red, -0.125rem 0 0.1rem blue;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: 50;
+  animation-direction: alternate;
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 5px 0 0 red, -5px 0 0 blue;
+  }  
+  to {
+    text-shadow: 5px 0.5 4px red, -5px -0.5px 4px blue;
+  }
+}
+
 .nav-item {
   font-family: 'Raleway', sans-serif;
   font-size: large;
   padding: 0px 20px 0px 20px;
-  color: rgb(97, 97, 97);
 }
 
 .nav-item .active {
