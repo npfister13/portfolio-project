@@ -1,10 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Nav, Navbar, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 export default function NavTab() {
 
     const [isNavOpen, toggleNav] = useState(false)
+
+    function useFirstRender() {
+        const ref = useRef(true);
+        const firstRender = ref.current;
+        ref.current = false;
+        return firstRender;
+    }
+
+    function NameStyle() {
+        var firstRender = useFirstRender();
+        
+        if (firstRender === true){
+            console.log('firstrender true')
+            firstRender = false;
+            return (
+                <h1 
+                    id="myName"
+                    style={{ 
+                        visibility: 'visible',
+                        fontFamily: 'Press Start 2P',
+                        fontSize: '64px',
+                        textShadow: '0.1rem 0 0.1 rem red, -0.125rem 0 0.1rem blue',
+                        animation: 'textfadein 1s 1, textloadin 0.01s 50 1.21s alternate'
+                    }}
+                
+                >NICHOLAS<span id="invisSpace"> </span>PFISTER</h1>
+            )
+        }
+        return (
+            <h1 id="myName">NICHOLAS<span id="invisSpace"> </span>PFISTER</h1>
+        )
+    }
 
     
     return(
@@ -13,7 +45,7 @@ export default function NavTab() {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <h1 id="myName">NICHOLAS<span id="invisSpace"> </span>PFISTER</h1>
+                            <NameStyle/>
                             {/* <img id="headerImg" src="./assets/images/myname.png" alt="Nicholas Pfister"/> */}
                             <h2 id="subtitle" className='pt-3'>Programmer | Artist</h2>
                         </div>

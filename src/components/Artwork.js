@@ -7,7 +7,7 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
     return( 
         <ul className="row artworksList">
             {                 
-                items.map((item, index) => {
+                items.slice(0).reverse().map((item, index) => {
                     tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
                     if (index < itemsPerScreen){
                         return (
@@ -79,7 +79,6 @@ export default class Artwork extends Component {
         }
         return(
             <React.Fragment>
-                <NavTab/>
                 <div className="artworks">
                     <div className="container">
                         <RenderItem items={this.state.artworks} itemsPerScreen={this.state.artworksPerScreen} itemsDisplayArray={this.state.artworksDisplayArray} />

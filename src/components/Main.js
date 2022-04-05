@@ -6,11 +6,13 @@ import Resume from './Resume';
 import Home from './Home';
 import Artwork from './Artwork'
 import Loading from './Loading';
+import NavTab from './NavTab';
 import { Routes, Route } from 'react-router-dom';
 
 export default function Main() {
     return(
         <React.Fragment>
+            <NavTab/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />

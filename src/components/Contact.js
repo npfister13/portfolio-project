@@ -59,7 +59,6 @@ export default function Contact() {
 
     return(
         <React.Fragment>
-            <NavTab/>
             <div className="contact">
                 <div className="container">
                     <h1>Get in Contact</h1>

@@ -5,7 +5,6 @@ export default function Home() {
 
     return(
         <React.Fragment>
-            <NavTab />
             <div className="homeWrapper">
                 <section id="about" className="p-5">
                     <div className="container">

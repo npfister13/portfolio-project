@@ -4,7 +4,6 @@ import NavTab from './NavTab';
 export default function About() {
     return(
         <React.Fragment>
-            <NavTab />
             <section id="about" className="p-5">
                 <div className="container">
                     <div className="row about">

@@ -114,7 +114,6 @@ export default class Projects extends Component {
         }
         return(
             <React.Fragment>
-                <NavTab/>
                 <div className="projects">
                     <div className="container">
                         <RenderItem items={this.state.projects} itemsPerScreen={this.state.projectsPerScreen} itemsDisplayArray={this.state.projectsDisplayArray} />

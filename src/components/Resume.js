@@ -68,7 +68,6 @@ export default function Resume() {
 
     return ( 
         <React.Fragment>
-            <NavTab />
             <div id="resumeWrapper">
                 <div className="container">
                     <DividerWithText>Education</DividerWithText>

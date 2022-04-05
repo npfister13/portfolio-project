@@ -82,8 +82,8 @@ html{
   visibility: visible;
   font-family: 'Press Start 2P', cursive;
   font-size: 64px !important;
-  text-shadow: 0.1rem 0 0.1 rem red, -0.125rem 0 0.1rem blue;
-  animation: textfadein 1s 1, textloadin 0.01s 50 1.21s alternate
+  /* text-shadow: 0.1rem 0 0.1 rem red, -0.125rem 0 0.1rem blue;
+  animation: textfadein 1s 1, textloadin 0.01s 50 1.21s alternate */
 }
 
 @keyframes textfadein {
