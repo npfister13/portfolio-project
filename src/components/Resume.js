@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import NavTab from './NavTab';
 import { Card } from 'react-bootstrap';
 import { makeStyles } from '@material-ui/core';
 import { SKILLS } from '../shared/skills'
@@ -27,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 const DividerWithText = ({children}) => {
     const classes = useStyles();
     return (
-        <div className={classes.container}>
+        <div className={classes.container}> 
             <div className={classes.border} />
             <span className={classes.content}>{children}</span>
             <div className={classes.border}/>

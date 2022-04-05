@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavTab from "./NavTab";
 import { ARTWORKS } from "../shared/artworks";
 
 function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {

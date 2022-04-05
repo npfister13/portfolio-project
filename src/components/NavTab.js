@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Nav, Navbar, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavTab from "./NavTab";
 import { Card } from "react-bootstrap";
 import { PROJECTS } from "../shared/projects";
 
