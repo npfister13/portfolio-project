@@ -5,7 +5,7 @@ import { BrowserRouter }  from 'react-router-dom';
 import './App.css';
 
 
-function App(){
+const MyApp = React.memo(function App(){
 
     const [loading, setLoading] = useState(true);
 
@@ -30,5 +30,5 @@ function App(){
             )}            
         </>
     );
-}
-export default App;
+})
+export default MyApp;

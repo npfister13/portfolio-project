@@ -81,7 +81,8 @@ html{
 #myName {
   visibility: visible;
   font-family: 'Press Start 2P', cursive;
-  font-size: 64px !important;
+  font-size: 4.2vw !important;
+  word-spacing: -2vw;
   /* text-shadow: 0.1rem 0 0.1 rem red, -0.125rem 0 0.1rem blue;
   animation: textfadein 1s 1, textloadin 0.01s 50 1.21s alternate */
 }
@@ -216,7 +217,7 @@ body {
   color: white;
   max-width: 520px !important;
   min-width: 200px;
-  min-height: 378px;
+  min-height: 200px;
   max-height: 520px;
   width: auto\9;
   margin: 20px auto;
@@ -333,8 +334,8 @@ body {
   padding: 0;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  /* width: 400px;
-  max-width: 100%; */
+  /* width: 400px; */
+  max-width: 100%;
   max-height: 500px;
   /* object-fit: none; */
 } 

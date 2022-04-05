@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Nav, Navbar, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-export default function NavTab() {
+function NavTab() {
 
     const [isNavOpen, toggleNav] = useState(false)
 
@@ -30,11 +30,11 @@ export default function NavTab() {
                         animation: 'textfadein 1s 1, textloadin 0.01s 50 1.21s alternate'
                     }}
                 
-                >NICHOLAS<span id="invisSpace"> </span>PFISTER</h1>
+                >NICHOLAS PFISTER</h1>
             )
         }
         return (
-            <h1 id="myName">NICHOLAS<span id="invisSpace"> </span>PFISTER</h1>
+            <h1 id="myName">NICHOLAS<span id="invisSpace" className="d-block d-sm-none"> </span>PFISTER</h1>
         )
     }
 
@@ -53,10 +53,12 @@ export default function NavTab() {
                 </div>
             </div>
             <Navbar dark sticky="top" expand="sm">
+                
                 <NavbarToggler onClick={() => {
                     toggleNav(!isNavOpen)
                     console.log(isNavOpen)
                     }} />
+                    
                 <Collapse isOpen={isNavOpen} navbar>
                     <Nav navbar className='m-auto'>
                         <NavItem className="glitch" active>
@@ -92,3 +94,5 @@ export default function NavTab() {
     )
 
 }
+
+export default React.memo(NavTab);

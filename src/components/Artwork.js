@@ -10,7 +10,7 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
                     tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
                     if (index < itemsPerScreen){
                         return (
-                            <img src={item.image} alt={item.alt}/>
+                            <img key={index} src={item.image} alt={item.alt}/>
                         )
                     }
                     else {
