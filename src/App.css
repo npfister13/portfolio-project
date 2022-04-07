@@ -462,6 +462,11 @@ body {
   }
 }
 
+#resumeWrapper .btn {
+  font-size: 18px;
+}
+
+
 .positionTitle {
   text-align: left;
   font-size: 18px;
@@ -506,12 +511,12 @@ body {
   object-fit: scale-down;
   background-color: #282c34;
   transition: 0.5s;
-} .bigSkill:hover img {
+} .bigSkill:hover img, .bigSkill:focus img {
   background-color: #2a4f3d;
   transition: 0.5s;
 }
 
-.bigSkill:hover {
+.bigSkill:hover, .bigSkill:focus {
   width: 320px !important;
   transition: 0.5s;
   transition-timing-function: ease;
@@ -529,10 +534,16 @@ body {
   margin-bottom: auto;
   margin-right: auto;
 }
-.bigSkillExtra p {
+.bigSkillExtra p {      
   margin: 0;
 }
 .bigSkill:hover .bigSkillExtra {
+  margin-left: 0px;
+  opacity: 1;
+  transition: .5s;
+}
+
+.bigSkill:focus .bigSkillExtra {
   margin-left: 0px;
   opacity: 1;
   transition: .5s;

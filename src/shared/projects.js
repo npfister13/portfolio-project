@@ -2,7 +2,7 @@ export const PROJECTS = [
     {
         id: 0,
         name: "NuCamp Campsites",
-        description: "Capstone project from my coding Bootcamp. A website for a ficticious campsite which allows your to book campsites and discover the camping areas.",
+        description: "Capstone project from my coding Bootcamp. A website for a fictitious campsite which allows you to book campsites and discover the camping areas.",
         image: "./assets/images/nucampsite.png",
         tags: ["React", "Reactstrap", "Redux"],
         github: "https://github.com/npfister13/react-nucampsite"
@@ -10,7 +10,7 @@ export const PROJECTS = [
     {
         id: 1,
         name: "Deep Rock Cafe",
-        description: "Mobile ordering app for a ficticious cafe where you can view the menu, contact the cafe, and order items through the app.",
+        description: "Mobile ordering app for a fictitious cafe where you can view the menu, contact the cafe, and order items through the app.",
         image: "./assets/images/deeprockcafereactnative.png",
         tags: ["React Native"] ,
         github: "https://github.com/npfister13/deeprockcafe-reactnative"

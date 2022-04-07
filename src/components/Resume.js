@@ -42,13 +42,13 @@ function RenderBigSkill({skills}) {
                 skills.map((skill) => {
                         return(
                             <div className='bigSkillWrapper'>
-                                <Card className="bigSkill" key={skill.id}>
+                                <Card className="bigSkill" key={skill.id} tabindex={0}>
                                     <Card.Header>
                                         <Card.Img variant="top" src={skill.image}/>
                                         <Card.Body className="bigSkillExtra">
                                             <Card.Title>{skill.skillName}</Card.Title>
                                             <Card.Text><strong>{skill.description}</strong></Card.Text>
-                                            <Card.Text>{skill.years}</Card.Text>
+                                            {/* <Card.Text>{skill.years}</Card.Text> */}
                                         </Card.Body>
                                     </Card.Header>
                                 </Card>
@@ -69,6 +69,7 @@ export default function Resume() {
         <React.Fragment>
             <div id="resumeWrapper">
                 <div className="container">
+                    <button className="btn" href="./assets/npfister 2022 resume.pdf" target="_blank" >Download Resume <i className="fa fa-external-link" aria-hidden="true" /></button>
                     <DividerWithText>Education</DividerWithText>
                     <div className="row">
                         <div className="col-12">
