@@ -47,8 +47,8 @@ function RenderBigSkill({skills}) {
                                         <Card.Img variant="top" src={skill.image}/>
                                         <Card.Body className="bigSkillExtra">
                                             <Card.Title>{skill.skillName}</Card.Title>
-                                            <Card.Text><strong>{skill.description}</strong></Card.Text>
-                                            {/* <Card.Text>{skill.years}</Card.Text> */}
+                                            {/* <Card.Text><strong>{skill.description}</strong></Card.Text> */}
+                                            <Card.Text>{skill.years}</Card.Text>
                                         </Card.Body>
                                     </Card.Header>
                                 </Card>
