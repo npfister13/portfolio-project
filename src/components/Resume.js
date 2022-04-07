@@ -69,7 +69,7 @@ export default function Resume() {
         <React.Fragment>
             <div id="resumeWrapper">
                 <div className="container">
-                    <button className="btn" href="./assets/npfister 2022 resume.pdf" target="_blank" >Download Resume <i className="fa fa-external-link" aria-hidden="true" /></button>
+                    <a className="btn" href="./assets/npfister 2022 resume.pdf" target="_blank" >Download Resume <i className="fa fa-external-link" aria-hidden="true" /></a>
                     <DividerWithText>Education</DividerWithText>
                     <div className="row">
                         <div className="col-12">
@@ -111,7 +111,7 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-                    <DividerWithText>Work</DividerWithText>
+                    <DividerWithText>Experience</DividerWithText>
                     <div className="row">
                         <div className="col-12">
                             <div className="row align-items-center">
