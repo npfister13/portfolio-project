@@ -73,7 +73,7 @@ export default function Resume() {
                     <DividerWithText>Education</DividerWithText>
                     <div className="row">
                         <div className="col-12">
-                            <div className="row align-items-center">
+                            {/* <div className="row align-items-center">
                                 <div className="col-8 col-sm-10 positionTitle">
                                     <p>
                                         <strong>NuCamp</strong><br/>
@@ -84,7 +84,7 @@ export default function Resume() {
                                 <div className="col col-md-2 positionYear">
                                     <p id='nucampYear'>2022</p>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="row align-items-center">
                                 <div className="col-8 col-sm-10 positionTitle">
                                     <p>
@@ -114,6 +114,19 @@ export default function Resume() {
                     <DividerWithText>Experience</DividerWithText>
                     <div className="row">
                         <div className="col-12">
+                            <div className="row align-items-center">
+                                <div className='col-8 col-sm-10 positionTitle'>
+                                    <p>
+                                        <strong>Full Stack Development Bootcamp, Nucamp</strong><br/>
+                                        Used HTML, CSS, JavaScript, Bootstrap, and React to design<br/>and create functional websites.<br/>
+                                        Created mobile android applications using React Native.<br/>
+                                        Exposed to back-end development languages such as Node.js, <br/>Express, and MongoDB
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='nuYear'>Oct 21 - Mar 22</p>
+                                </div>
+                            </div>
                             <div className="row align-items-center">
                                 <div className='col-8 col-sm-10 positionTitle'>
                                     <p>
