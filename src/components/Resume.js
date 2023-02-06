@@ -35,25 +35,24 @@ const DividerWithText = ({children}) => {
 }
 
 function RenderBigSkill({skills}) {
-    console.log(skills)
     return (
         <div className="row">
             {
                 skills.map((skill) => {
-                        return(
-                            <div className='bigSkillWrapper'>
-                                <Card className="bigSkill" key={skill.id} tabindex={0}>
-                                    <Card.Header>
-                                        <Card.Img variant="top" src={skill.image}/>
-                                        <Card.Body className="bigSkillExtra">
-                                            <Card.Title>{skill.skillName}</Card.Title>
-                                            {/* <Card.Text><strong>{skill.description}</strong></Card.Text> */}
-                                            <Card.Text>{skill.years}</Card.Text>
-                                        </Card.Body>
-                                    </Card.Header>
-                                </Card>
-                            </div>
-                        )
+                    return(
+                        <div className='bigSkillWrapper'>
+                            <Card className="bigSkill" key={skill.id} tabindex={0}>
+                                <Card.Header>
+                                    <Card.Img variant="top" src={skill.image}/>
+                                    <Card.Body className="bigSkillExtra">
+                                        <Card.Title>{skill.skillName}</Card.Title>
+                                        {/* <Card.Text><strong>{skill.description}</strong></Card.Text> */}
+                                        <Card.Text>{skill.years}</Card.Text>
+                                    </Card.Body>
+                                </Card.Header>
+                            </Card>
+                        </div>
+                    )
                 })
             }
         </div>
