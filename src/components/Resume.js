@@ -68,7 +68,7 @@ export default function Resume() {
         <React.Fragment>
             <div id="resumeWrapper">
                 <div className="container">
-                    <a className="btn" href="./assets/npfister 2022 resume.pdf" target="_blank" >Download Resume <i className="fa fa-external-link" aria-hidden="true" /></a>
+                    <a className="btn" href="./assets/npfister resume 2023.pdf" target="_blank" >Download Resume <i className="fa fa-external-link" aria-hidden="true" /></a>
                     <DividerWithText>Education</DividerWithText>
                     <div className="row">
                         <div className="col-12">
@@ -113,6 +113,20 @@ export default function Resume() {
                     <DividerWithText>Experience</DividerWithText>
                     <div className="row">
                         <div className="col-12">
+                        <div className="row align-items-center">
+                                <div className='col-8 col-sm-10 positionTitle'>
+                                    <p>
+                                        <strong>OPTiMO IT</strong><br/>
+                                        Utilize HTML, CSS, Javascript and the React library to transform designs<br/>
+                                        and customer specifications into functional and efficient webpages<br/>
+                                        that communicate with back-end services<br/>
+                                        Collaborate daily with multiple teams using AGILE processes
+                                    </p>
+                                </div>
+                                <div className="col col-md-2 positionYear">
+                                    <p id='fdYear'>Present</p>
+                                </div>
+                            </div>
                             <div className="row align-items-center">
                                 <div className='col-8 col-sm-10 positionTitle'>
                                     <p>
@@ -130,8 +144,8 @@ export default function Resume() {
                                 <div className='col-8 col-sm-10 positionTitle'>
                                     <p>
                                         <strong>Freelance Designer</strong><br/>
-                                        Created artwork and animations for video games<br/>
-                                        and promotional purposes.
+                                        Create artwork and animations for video games and promotional<br/>or marketing purposes<br/>
+                                        Design and maintain small business and hobby websites for clients
                                     </p>
                                 </div>
                                 <div className="col col-md-2 positionYear">
@@ -150,31 +164,6 @@ export default function Resume() {
                                 </div>
                                 <div className="col col-md-2 positionYear">
                                     <p id='ozYear'>Aug 19 - Jul 21</p>
-                                </div>
-                            </div>
-                            <div className='row align-items-center'>
-                                <div className='col-8 col-sm-10 positionTitle'>
-                                    <p>
-                                        <strong>Schneider Electric</strong><br/>
-                                        Project Connect Intern<br/>
-                                        Analyzed supply chain methods and researched<br/>manufacturing methods to reduce product deficiencies.
-                                    </p>
-                                </div>
-                                <div className="col col-md-2 positionYear">
-                                <p id='schYear'>Jan 19 - May 19</p>
-                                </div>
-                            </div>
-                            <div className='row align-items-center'>
-                                <div className='col-8 col-sm-10 positionTitle'>
-                                    <p>
-                                        <strong>Lexmark</strong><br/>
-                                        Project Connect Intern<br/>
-                                        Assisted in analying the buyer's journey to develop solutions<br/>
-                                        in order to incrase sales and imrpove customer relationships.
-                                    </p>
-                                </div>
-                                <div className="col col-md-2 positionYear">
-                                    <p id='lexYear'>Aug 18 - Dec 18</p>
                                 </div>
                             </div>
                         </div>

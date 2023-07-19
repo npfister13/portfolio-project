@@ -7,14 +7,14 @@ function RenderItem({items, itemsDisplayArray, itemsPerScreen}) {
         <ul className="row artworksList">
             {                 
                 items.slice(0).reverse().map((item, index) => {
-                    tempArray.indexOf(item) > -1 ? console.log('in array already') : tempArray.push(item) 
+                    tempArray.indexOf(item) > -1 && tempArray.push(item) 
                     if (index < itemsPerScreen){
                         return (
                             <img key={index} src={item.image} alt={item.alt}/>
                         )
                     }
                     else {
-                        return(null)
+                        return null;
                     }
                 })
             }
@@ -43,7 +43,7 @@ export default class Artwork extends Component {
     constructor(props){
         super(props);
         this.state = {
-            artworksPerScreen: 4,
+            artworksPerScreen: 8,
             artworks: ARTWORKS,
             artworksDisplayArray: [],
         }
@@ -52,26 +52,25 @@ export default class Artwork extends Component {
         if (this.state.artworksPerScreen >= this.state.artworks.length){
         }
         else {
-            this.setState({artworksPerScreen: this.state.artworksPerScreen + 2})
+            this.setState({artworksPerScreen: this.state.artworksPerScreen + 4})
             console.log(this.state.artworksPerScreen)
         }
     }
 
     decreaseArtworkCount = () => {
-        this.setState({artworksPerScreen: this.state.artworksPerScreen - 2})
+        this.setState({artworksPerScreen: this.state.artworksPerScreen - 4})
         console.log(this.state.artworksPerScreen)
     }
 
     render() {
         let moreArtworks;
         let lessArtworks;
-        console.log('render()')
         if (this.state.artworksPerScreen < this.state.artworks.length) {
             moreArtworks = <MoreButton onClick={this.increaseArtworkCount} />
         } else {
             moreArtworks = null
         }
-        if (this.state.artworksPerScreen > 4) {
+        if (this.state.artworksPerScreen > 8) {
             lessArtworks = <LessButton onClick={this.decreaseArtworkCount} />
         } else {
             lessArtworks = null
